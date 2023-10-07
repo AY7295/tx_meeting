@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:hello/pages/util/notify.dart';
+import 'package:hello/util/notify.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -27,6 +27,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: null,
         title: const Text('Login'),
         centerTitle: true,
       ),

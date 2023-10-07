@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello/pages/util/notify.dart';
+import 'package:hello/util/notify.dart';
 
 class HomeDrawer extends StatefulWidget {
   const HomeDrawer({super.key});

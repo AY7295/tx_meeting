@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hello/component/booked_meeting.dart';
 import 'package:hello/pages/home/drawer.dart';
-
-import '../util/notify.dart';
+import 'package:hello/util/notify.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,7 +17,10 @@ class _HomeState extends State<Home> {
     };
   }
 
-  var list = <Widget>[const _BookedMeeting(), const _BookedMeeting()];
+  var list = <Widget>[
+    const BookedMeeting(title: 'meeting title1'),
+    const BookedMeeting(title: 'meeting title2')
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -95,34 +98,6 @@ class Button extends StatelessWidget {
           Icon(icon),
           Text(title),
         ],
-      ),
-    );
-  }
-}
-
-class _BookedMeeting extends StatelessWidget {
-  const _BookedMeeting({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        border: Border(
-          bottom: BorderSide(color: Colors.grey, width: 1.0),
-        ),
-      ),
-      margin: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: ListTile(
-        onTap: () {
-          showAlert(context: context, content: 'undo');
-        },
-        leading: const Icon(Icons.mail),
-        title: const SizedBox(
-          child: Text(
-            'meeting title',
-            textAlign: TextAlign.right,
-          ),
-        ),
       ),
     );
   }

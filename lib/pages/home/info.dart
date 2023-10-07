@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../util/notify.dart';
+import 'package:hello/util/notify.dart';
 
 class Info extends StatefulWidget {
   const Info({super.key});
